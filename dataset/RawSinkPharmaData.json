@@ -1,0 +1,149 @@
+{
+	"name": "RawSinkPharmaData",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage2",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "pharma_sink_data.csv",
+				"folderPath": "SinkDataset",
+				"container": "pharma"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "drug_name_brand",
+				"type": "String"
+			},
+			{
+				"name": "drug_name_generic",
+				"type": "String"
+			},
+			{
+				"name": "drug_company",
+				"type": "String"
+			},
+			{
+				"name": "ndc_code",
+				"type": "String"
+			},
+			{
+				"name": "icd9_diagnosis_code",
+				"type": "String"
+			},
+			{
+				"name": "icd9_diagnosis_desc_short",
+				"type": "String"
+			},
+			{
+				"name": "icd9_diagnosis_desc_long",
+				"type": "String"
+			},
+			{
+				"name": "icd9_procedure_code",
+				"type": "String"
+			},
+			{
+				"name": "icd9_procedure_desc_short",
+				"type": "String"
+			},
+			{
+				"name": "icd9_procedure_desc_long",
+				"type": "String"
+			},
+			{
+				"name": "icd10_diagnosis_code",
+				"type": "String"
+			},
+			{
+				"name": "icd10_diagnosis_desc_short",
+				"type": "String"
+			},
+			{
+				"name": "icd10_diagnosis_desc_long",
+				"type": "String"
+			},
+			{
+				"name": "icd10_procedure_code",
+				"type": "String"
+			},
+			{
+				"name": "icd10_procedure_desc_short",
+				"type": "String"
+			},
+			{
+				"name": "icd10_procedure_desc_long",
+				"type": "String"
+			},
+			{
+				"name": "ein",
+				"type": "String"
+			},
+			{
+				"name": "nhs_number",
+				"type": "String"
+			},
+			{
+				"name": "medicare_beneficiary_id",
+				"type": "String"
+			},
+			{
+				"name": "stock_name",
+				"type": "String"
+			},
+			{
+				"name": "stock_symbol",
+				"type": "String"
+			},
+			{
+				"name": "stock_sector",
+				"type": "String"
+			},
+			{
+				"name": "stock_industry",
+				"type": "String"
+			},
+			{
+				"name": "stock_market_cap",
+				"type": "String"
+			},
+			{
+				"name": "currency_code",
+				"type": "String"
+			},
+			{
+				"name": "currency",
+				"type": "String"
+			},
+			{
+				"name": "department_retail",
+				"type": "String"
+			},
+			{
+				"name": "department_corporate",
+				"type": "String"
+			},
+			{
+				"name": "university",
+				"type": "String"
+			},
+			{
+				"name": "plant_common_name",
+				"type": "String"
+			},
+			{
+				"name": "plant_scientific_name",
+				"type": "String"
+			}
+		]
+	}
+}
