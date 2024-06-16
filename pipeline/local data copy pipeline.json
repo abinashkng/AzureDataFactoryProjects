@@ -2,6 +2,41 @@
 	"name": "local data copy pipeline",
 	"properties": {
 		"description": "here, using this pipeline, data is ingested from local storage to azure data lake blob storage.",
+		"activities": [
+			{
+				"name": "Localstorage Data",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobFSReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
+					},
+					"enableStaging": false
+				},
+				"inputs": [
+					{
+						"referenceName": "Pharma_Dataset",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
 		"annotations": [
 			"localstorage-ADF-ADLS Blob container"
 		]
