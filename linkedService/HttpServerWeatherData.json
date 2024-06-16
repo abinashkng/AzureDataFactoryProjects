@@ -1,0 +1,12 @@
+{
+	"name": "HttpServerWeatherData",
+	"properties": {
+		"annotations": [],
+		"type": "HttpServer",
+		"typeProperties": {
+			"url": "https://weather.com/en-IN/weather/today/l/34.08,74.80?par=google",
+			"enableServerCertificateValidation": true,
+			"authenticationType": "Anonymous"
+		}
+	}
+}
