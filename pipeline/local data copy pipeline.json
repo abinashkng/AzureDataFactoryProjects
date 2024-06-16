@@ -1,0 +1,9 @@
+{
+	"name": "local data copy pipeline",
+	"properties": {
+		"description": "here, using this pipeline, data is ingested from local storage to azure data lake blob storage.",
+		"annotations": [
+			"localstorage-ADF-ADLS Blob container"
+		]
+	}
+}
