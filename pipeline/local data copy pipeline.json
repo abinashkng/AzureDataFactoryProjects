@@ -56,7 +56,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "RawSinkPharmaData",
+						"referenceName": "PharmaSinkData",
 						"type": "DatasetReference"
 					}
 				]
